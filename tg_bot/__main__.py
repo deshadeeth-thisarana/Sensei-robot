@@ -31,8 +31,31 @@ You can find the list of available commands with /help.
 ⚠️All Rights Reserved⚠️
 """
 
+buttons = [
+    [
+        InlineKeyboardButton(
+            text="⛑ Help & Commands⛑", url="https://t.me/Mr_Sensei_bot?start=help"),
+    ],
+    [
+        InlineKeyboardButton(
+            text="🧰 Support Group 🧰", url="https://t.me/gangoffriends"),
+        InlineKeyboardButton(
+            text="📺 Update Channel 📺", url="https://t.me/Gangoffriendschannel"),
+    ],
+    [
+        
+        InlineKeyboardButton(
+            text=" ⚡️ Developer ", url="https://t.me/DeshadeethThisarana"),
+    ],
+    [
+        InlineKeyboardButton(
+            text="➕ Add Me to Your Group 🎨", url="t.me/Mr_Sensei_bot?startgroup=true"
+        ),
+    ],
+]
+
 HELP_STRINGS = """
-Hey there! My name is *{}*.
+Hey there! My name is *{}*[🤖](https://telegra.ph/file/0630463121ee4364736ca.png).
 I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of \
 the things I can help you with.
 
@@ -49,7 +72,9 @@ the things I can help you with.
 And the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
+SENSEI_IMG = "https://telegra.ph/file/0630463121ee4364736ca.png"
+
+DONATE_STRING = """Heya, glad to hear you want to donate[!](https://telegra.ph/file/0630463121ee4364736ca.png)
 It took lots of work for my creator to get me to where I am now, and every donation helps \
 motivate him to make me even better. He's just a student, so every little helps!
 There are two ways of paying him; [PayPal](paypal.me/Deshadeeth), or [Telegram](t.me/DeshadeethThisarana)."""
@@ -145,11 +170,15 @@ def start(bot: Bot, update: Update, args: List[str]):
 
         else:
             first_name = update.effective_user.first_name
-            update.effective_message.reply_text(
+            update.effective_message.reply_photo(
+                SENSEI_IMG,
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
-                parse_mode=ParseMode.MARKDOWN)
+                reply_markup=InlineKeyboardMarkup(buttons),
+                parse_mode=ParseMode.MARKDOWN,
+                 timeout=60,
+            )
     else:
-        update.effective_message.reply_text("Yo, whadup?")
+        update.effective_message.reply_text("Waked up😏😏😏")
 
 
 # for test purposes
