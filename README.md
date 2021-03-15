@@ -6,7 +6,7 @@ bots aiming to provide simple plugin expansion via a simple drag and drop.
 
 Can be found on telegram as [Sensei](https://t.me/Mr_Sensei_bot).
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/deshadeeth-thisarana/Arrow)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/deshadeeth-thisarana/Sensei-robot)
 
 For questions regarding creating your own bot, please head to [this chat](https://t.me/MarieOT) where you'll find a
 group of volunteers to help. We'll also help when a database schema changes, and some table column needs to be
