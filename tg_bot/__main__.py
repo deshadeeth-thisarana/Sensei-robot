@@ -34,7 +34,7 @@ You can find the list of available commands with /help.
 buttons = [
     [
         InlineKeyboardButton(
-            text="⛑ Help & Commands⛑", url="https://t.me/Mr_Sensei_bot?start=help"),
+            text="⛑ Help & Commands⛑", url="https://t.me/Mr_Titan_robot?start=help"),
     ],
     [
         InlineKeyboardButton(
@@ -49,13 +49,13 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="➕ Add Me to Your Group 🎨", url="t.me/Mr_Sensei_bot?startgroup=true"
+            text="➕ Add Me to Your Group 🎨", url="t.me/Mr_Titan_robot?startgroup=start"
         ),
     ],
 ]
 
 HELP_STRINGS = """
-Hey there! My name is *{}*[🤖](https://telegra.ph/file/0630463121ee4364736ca.png).
+Hey there! My name is *{}*[🤖](https://telegra.ph/file/9175b634560b417d4114c.jpg).
 I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of \
 the things I can help you with.
 
@@ -72,9 +72,9 @@ the things I can help you with.
 And the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SENSEI_IMG = "https://telegra.ph/file/0630463121ee4364736ca.png"
+TITAN_IMG = "https://telegra.ph/file/9175b634560b417d4114c.jpg"
 
-DONATE_STRING = """Heya, glad to hear you want to donate[!](https://telegra.ph/file/0630463121ee4364736ca.png)
+DONATE_STRING = """Heya, glad to hear you want to donate[!](https://telegra.ph/file/9175b634560b417d4114c.jpg)
 It took lots of work for my creator to get me to where I am now, and every donation helps \
 motivate him to make me even better. He's just a student, so every little helps!
 There are two ways of paying him; [PayPal](paypal.me/Deshadeeth), or [Telegram](t.me/DeshadeethThisarana)."""
